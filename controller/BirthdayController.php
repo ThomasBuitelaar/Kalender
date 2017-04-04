@@ -5,7 +5,7 @@ require(ROOT . "model/BirthdayModel.php");
 function index()
 {
 	render("birthday/index", array(
-		"birthdays" => getAllBirthdays()
+		"birthdays" => getAllbirthdays()
 		));
 }
 
@@ -27,13 +27,13 @@ function createSave()
 function edit($id)
 {
 	render("birthday/edit", array(
-		"birthday" => getBirthday($id)
+		"birthday" => getbirthday($id)
 	));
 }
 
 function editSave()
 {
-	if (!editBirthday()) {
+	if (!editbirthday()) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}

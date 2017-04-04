@@ -14,7 +14,7 @@ function getbirthday($id)
 	return $query->fetch();
 }
 
-function getAllBirthdays() 
+function getAllbirthdays() 
 {
 	$db = openDatabaseConnection();
 
@@ -86,7 +86,7 @@ function createbirthday()
 	
 	$db = openDatabaseConnection();
 
-	$sql = "INSERT INTO birthdays(person, day, month, year) VALUES (:person, :day, :month, year)";
+	$sql = "INSERT INTO birthdays(person, day, month, year) VALUES (:person, :day, :month, :year)";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':person' => $person,
