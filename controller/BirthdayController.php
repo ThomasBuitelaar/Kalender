@@ -20,19 +20,32 @@ function createSave()
 		header("Location:" . URL . "error/index");
 		exit();
 	}
+
+	header("Location:" . URL . "birthday/index");
 }
 
-function edit()
+function edit($id)
 {
-
+render("birthday/edit", array(
+	"birthday" => getBirthday($id)
+	))
 }
 
 function editSave()
 {
+	if (!editBirthday()) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
 
+	header("Location:" . URL . "student/index");
 }
 
-function delete()
+function delete($id)
 {
-
+	if (!deleteBirthday($id)) {
+		header("Location:" . URL . "birthday/index");
+		exit();
+	}
+	header("Location:" . URL . "birthday/index");
 }
