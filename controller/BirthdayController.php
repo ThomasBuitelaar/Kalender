@@ -16,7 +16,7 @@ function create()
 
 function createSave()
 {
-	if (!createBirthday()) {
+	if (!createbirthday()) {
 		header("Location:" . URL . "error/index");
 		exit();
 	}
