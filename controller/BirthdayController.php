@@ -11,12 +11,15 @@ function index()
 
 function create()
 {
-
+	render("birthday/create");
 }
 
 function createSave()
 {
-
+	if (!createBirthday()) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
 }
 
 function edit()
