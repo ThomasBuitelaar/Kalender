@@ -26,9 +26,9 @@ function createSave()
 
 function edit($id)
 {
-render("birthday/edit", array(
-	"birthday" => getBirthday($id)
-	))
+	render("birthday/edit", array(
+		"birthday" => getBirthday($id)
+	));
 }
 
 function editSave()
