@@ -38,7 +38,7 @@ function editSave()
 		exit();
 	}
 
-	header("Location:" . URL . "student/index");
+	header("Location:" . URL . "birthday/index");
 }
 
 function delete($id)
