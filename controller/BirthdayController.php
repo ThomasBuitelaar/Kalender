@@ -43,7 +43,7 @@ function editSave()
 
 function delete($id)
 {
-	if (!deleteBirthday($id)) {
+	if (!deletebirthday($id)) {
 		header("Location:" . URL . "birthday/index");
 		exit();
 	}

@@ -35,7 +35,7 @@ function editbirthday()
 		$year = isset($_POST['year']) ? $_POST['year'] : null;
 	$id = isset($_POST['id']) ? $_POST['id'] : null;
 	
-	if (strlen($person) == 0 || strlen($day) == 0 || strlen($month) == 0) {
+	if (strlen($person) == 0 || strlen($day) == 0 || strlen($month) == 0 || strlen($year) == 0) {
 		return false;
 	}
 	
