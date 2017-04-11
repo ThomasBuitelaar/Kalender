@@ -1,6 +1,6 @@
 <?php
 
-function getbirthday($id) 
+function getBirthday($id) 
 {
 	$db = openDatabaseConnection();
 
@@ -14,7 +14,7 @@ function getbirthday($id)
 	return $query->fetch();
 }
 
-function getAllbirthdays() 
+function getAllBirthdays() 
 {
 	$db = openDatabaseConnection();
 
@@ -27,12 +27,12 @@ function getAllbirthdays()
 	return $query->fetchAll();
 }
 
-function editbirthday() 
+function editBirthday() 
 {
 	$person = isset($_POST['person']) ? $_POST['person'] : null;
 	$day = isset($_POST['day']) ? $_POST['day'] : null;
 	$month = isset($_POST['month']) ? $_POST['month'] : null;
-		$year = isset($_POST['year']) ? $_POST['year'] : null;
+	$year = isset($_POST['year']) ? $_POST['year'] : null;
 	$id = isset($_POST['id']) ? $_POST['id'] : null;
 	
 	if (strlen($person) == 0 || strlen($day) == 0 || strlen($month) == 0 || strlen($year) == 0) {
@@ -55,7 +55,7 @@ function editbirthday()
 	return true;
 }
 
-function deletebirthday($id = null) 
+function deleteBirthday($id = null) 
 {
 	if (!$id) {
 		return false;
@@ -73,7 +73,7 @@ function deletebirthday($id = null)
 	return true;
 }
 
-function createbirthday() 
+function createBirthday() 
 {
 	$person = isset($_POST['person']) ? $_POST['person'] : null;
 	$day = isset($_POST['day']) ? $_POST['day'] : null;

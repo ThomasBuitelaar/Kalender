@@ -3,7 +3,7 @@
     <form action="<?= URL ?>birthday/editSave" method="post">
     
         <input type="text" name="person" value="<?= $birthday['person']; ?>">
-        <select>
+        <select name="day">
             <?php for ($i = 1; $i <= 31; $i++) {
             echo "<option value=\"$i\">$i</option>";
         } ?>
@@ -14,7 +14,7 @@
             <option value="2">Februari</option>
             <option value="3">Maart</option>
             <option value="4">April</option>
-            <option value="5"Mei></option>
+            <option value="5">Mei</option>
             <option value="6">Juni</option>
             <option value="7">Juli</option>
             <option value="8">Augustus</option>
