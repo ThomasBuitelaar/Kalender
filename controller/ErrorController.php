@@ -2,5 +2,5 @@
 
 function index()
 {
-	echo "404 u done fucked up";
+	echo "404"
 }
