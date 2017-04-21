@@ -44,7 +44,7 @@ function editSave()
 function delete($id)
 {
 	if (!deleteBirthday($id)) {
-		header("Location:" . URL . "birthday/index");
+		header("Location:" . URL . "error/index");
 		exit();
 	}
 	header("Location:" . URL . "birthday/index");
